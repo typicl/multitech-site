@@ -1,0 +1,302 @@
+.page {
+  margin-top: 220px;
+
+  .title {
+    @include font-title;
+  }
+
+  .paragraph {
+    @include font-paragraph;
+  }
+
+  .eyebrow {
+    @include font-eyebrow;
+  }
+
+  .hero {
+    background-image: linear-gradient(rgba($blue-dark, 70%),
+        rgba($blue-dark, 70%)),
+      url('../assets/hero.jpg');
+    background-size: cover;
+    padding: 150px 0;
+    margin-top: -120px;
+
+    @include mobile {
+      padding: 80px 40px;
+    }
+
+    .content {
+      margin: 0 auto;
+      max-width: 700px;
+      text-align: left;
+    }
+
+    .title {
+      color: $white;
+      font-size: 52px;
+      margin: 0 0 40px;
+      text-transform: none;
+
+      @include mobile {
+        font-size: 40px;
+      }
+    }
+
+    .paragraph {
+      color: $white;
+      font-size: 24px;
+      margin: 0 0 46px;
+    }
+  }
+
+  h2 {
+    @include font-eyebrow;
+    margin-bottom: 22px;
+  }
+
+  h3 {
+    @include font-title;
+    margin-bottom: 22px;
+  }
+
+  h5 {
+    @include font-title;
+    font-size: 22px;
+    margin-bottom: 24px;
+  }
+
+  p {
+    @include font-paragraph;
+    margin-bottom: 32px;
+  }
+
+  form {
+    >div {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+
+      +div {
+        margin-top: 28px;
+      }
+    }
+
+    button {
+      @include font;
+      font-weight: 600;
+      background: $orange;
+      border-radius: 4px;
+      color: $white;
+      display: inline-flex;
+      line-height: 1;
+      padding: 24px 36px;
+      text-align: center;
+
+      &:disabled {
+        background: $gray-light;
+        cursor: default;
+      }
+    }
+  }
+
+  label {
+    @include font-paragraph;
+    color: $blue;
+  }
+
+  input,
+  textarea {
+    @include font-paragraph;
+    background: $white-dark;
+    border: 1px solid $gray-light;
+    border-radius: 12px;
+    line-height: 1.15;
+    padding: 22px;
+  }
+
+  .buttonWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 22px;
+    margin: 46px 0 0;
+  }
+}
+
+.section {
+  margin: 100px auto;
+  max-width: 90%;
+
+  @include mobile {
+    margin: 60px auto;
+  }
+
+  &.alt {
+    background: $white-dark;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 58px 0;
+
+    @include mobile {
+      padding: 32px;
+    }
+  }
+
+  &.outline {
+    border: 1px solid $blue-dark;
+    border-radius: 4px;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 58px 0;
+
+    @include mobile {
+      padding: 32px;
+    }
+
+    >div {
+      max-width: 660px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.center {
+  justify-content: center;
+  text-align: center;
+}
+
+.half {
+  display: flex;
+  gap: 84px;
+
+  @include mobile {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  >div {
+    flex: 1;
+  }
+
+  +.half {
+    margin-top: 44px;
+
+    @include mobile {
+      margin-top: 12px;
+    }
+  }
+}
+
+.multiPrintSolutions,
+.qualityAssessments {
+  display: flex;
+  gap: 40px;
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  img {
+    width: 33vw;
+    object-fit: cover;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+}
+
+.commitment {
+  >div {
+    color: $blue-dark;
+    display: flex;
+    gap: 60px;
+    justify-content: space-between;
+    margin: 42px auto;
+    max-width: 890px;
+    width: 90%;
+
+    @include mobile {
+      gap: 32px;
+    }
+
+    >div {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    svg {
+      height: 44px;
+    }
+  }
+}
+
+.printers {
+  h3 {
+    margin-bottom: 80px;
+  }
+}
+
+.contactGroup {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 148px;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+
+  .details {
+    h5 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: 32px;
+    }
+
+    a {
+      @include font-bold;
+      color: $orange;
+    }
+
+    div {
+      +div {
+        margin-top: 80px;
+      }
+    }
+  }
+}
+
+.team {
+  display: flex;
+  gap: 32px;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: 60px auto 0;
+  text-align: center;
+
+  @include mobile {
+    flex-direction: column;
+    max-width: 90%;
+  }
+
+  h2 {
+    line-height: 1;
+    margin: 28px 0 12px;
+
+    @include mobile {
+      margin: 18px 0 8px;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  img {
+    width: 100%;
+    height: 394px;
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,21 @@
+---
+import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
+import AboutPage from "./About.tsx";
+import "../styles/global.css";
+import { Header } from "../components/header";
+import { Footer } from "../components/footer";
+---
+
+<html lang="en">
+  <head>
+    <title>About | Multitech Office Machines</title>
+    <GoogleFontsOptimizer
+      url="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    />
+  </head>
+  <body>
+    <Header client:load />
+    <AboutPage client:load />
+    <Footer client:load />
+  </body>
+</html>

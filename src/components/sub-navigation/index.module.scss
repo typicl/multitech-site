@@ -1,0 +1,23 @@
+.subNavigation {
+  background: rgba($color: $blue, $alpha: 0.5);
+
+  > div {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 auto;
+    max-width: 90%;
+    width: 100%;
+
+    @include mobile {
+      justify-content: center;
+    }
+  }
+
+  a {
+    @include font-bold;
+    color: $white;
+    font-size: 14px;
+    padding: 12px 18px;
+    text-transform: uppercase;
+  }
+}

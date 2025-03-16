@@ -1,0 +1,50 @@
+$font-stack: 'Open Sans', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+@mixin font {
+  font-family: $font-stack;
+  font-optical-sizing: auto;
+}
+
+@mixin font-bold {
+  @include font;
+  font-weight: 700;
+}
+
+@mixin font-paragraph {
+  @include font;
+  color: $gray;
+  font-size: 18px;
+}
+
+@mixin font-title {
+  @include font;
+  color: $blue-dark;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 1.125;
+}
+
+@mixin font-eyebrow {
+  @include font;
+  color: $blue;
+  font-size: 16px;
+  font-style: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+li,
+ol,
+td,
+a {
+  @include font;
+  margin: 0;
+}

@@ -1,0 +1,29 @@
+.tabsSection {
+  .tabs {
+    border: 2px solid $gray-light;
+    border-radius: 30px;
+    display: inline-flex;
+    margin-bottom: 36px;
+  }
+
+  button {
+    @include font-paragraph;
+    background: transparent;
+    border: none;
+    border-radius: 30px;
+    line-height: 1;
+    outline: none;
+    padding: 20px 28px;
+    margin: -2px;
+    cursor: pointer;
+
+    &.active {
+      background: $blue;
+      color: $white;
+    }
+  }
+
+  p {
+    @include font-paragraph;
+  }
+}
