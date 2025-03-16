@@ -7,6 +7,7 @@ import { faFaceSmile } from '@fortawesome/free-regular-svg-icons/faFaceSmile';
 import { faPrint } from '@fortawesome/free-solid-svg-icons/faPrint';
 import { faAward } from '@fortawesome/free-solid-svg-icons/faAward';
 import { faHeadphones } from '@fortawesome/free-solid-svg-icons/faHeadphones';
+import { faRecycle } from '@fortawesome/free-solid-svg-icons/faRecycle'
 import solutions from '../assets/solutions.jpg';
 import assement from '../assets/print-assessment.jpg';
 import styles from './page.module.scss';
@@ -71,8 +72,9 @@ export function Home() {
           <img src={solutions.src} />
         </section>
 
-        <section className={cx(styles.section, styles.outline)}>
+        <section className={cx(styles.section, styles.outline, styles.recycle)}>
           <div className={styles.center}>
+            <FontAwesomeIcon icon={faRecycle} size='2xl' />
             <h2>What our customers love:</h2>
             <h3>Heading callout for recycling</h3>
           </div>
